@@ -25,3 +25,9 @@ if(!['privacy','terms','contact','service-areas'].includes(slug)) schema['@graph
 <style is:global>.request-form-card{max-width:700px}.new-content-section ul{list-style:disc}.new-content-section form{box-sizing:border-box}form[data-lead-form]{box-sizing:border-box}[hidden]{display:none!important}</style>
 
 <style is:global>#request-form,#contact{scroll-margin-top:150px}.new-content-section h2{overflow-wrap:break-word}</style>
+
+<style is:global>
+header .sat-desktop-nav summary,.sat-mobile-panel summary { list-style:none; cursor:pointer; }
+header .sat-desktop-nav summary::-webkit-details-marker,.sat-mobile-panel summary::-webkit-details-marker { display:none; }
+header .sat-desktop-nav summary::after,.sat-mobile-panel summary::after { content:""; display:inline-block; margin-left:6px; width:6px; height:6px; border-right:1.5px solid currentColor; border-bottom:1.5px solid currentColor; transform:rotate(45deg) translateY(-2px); }
+</style>
