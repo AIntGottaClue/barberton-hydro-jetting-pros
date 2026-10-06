@@ -1,0 +1,9 @@
+---
+import Page from '../../layouts/Page.astro';
+import hoods from '../../data/hoods.json';
+const files = import.meta.glob('../../data/pages/hood-*.json', { eager: true });
+export function getStaticPaths() { return hoods.map((h) => ({ params: { slug: h.slug } })); }
+const { slug } = Astro.params;
+const page = (files[`../../data/pages/hood-${slug}.json`] as any).default;
+---
+<Page page={page} slug={`service-areas/${slug}`} />
